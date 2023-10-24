@@ -1,0 +1,87 @@
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.header {
+  text-align: center;
+  background-color: navy;
+  color: white;
+}
+aside {
+  width: 20%;
+  float: left;
+  margin: 10px;
+}
+
+aside h2 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+#searchBar {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px black solid;
+}
+.search button {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px;
+  width: 100%;
+  color: white;
+  background-color: rgb(94, 155, 247);
+  border: 0px;
+  border-radius: 5px;
+  height: 40px;
+}
+.history button {
+  display: block;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: grey;
+  height: 40px;
+}
+.hero {
+  border: 2px black solid;
+  width: 70%;
+  float: left;
+  padding: 5px;
+  margin-left: 35px;
+}
+#currentCity {
+  display: inline;
+}
+#currentDate {
+  display: inline;
+}
+
+.forecast {
+  width: 70%;
+  float: left;
+  padding: 5px;
+  margin-left: 35px;
+  display: block;
+}
+.forecast h3 {
+  display: block;
+}
+.card {
+  float: left;
+  background-color: navy;
+  color: white;
+  margin: 5px;
+  border-radius: 5px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.cardDate {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
