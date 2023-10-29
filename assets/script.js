@@ -5,9 +5,6 @@ function getApi(event) {
   var searchBar = document.getElementById("searchBar");
   var searchedCity = searchBar.value;
 
-  console.log(searchedCity);
-  console.log(requestUrl);
-
   var requestUrl =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     searchedCity +
@@ -22,8 +19,8 @@ function getApi(event) {
       return response1.json();
     })
     .then(async function (data1) {
-      const response2 = await fetch(forecastUrl);
-      const data2 = await response2.json();
+      var response2 = await fetch(forecastUrl);
+      var data2 = await response2.json();
       console.log("Data from API 1:", data1);
       console.log("Data from API 2:", data2);
 
@@ -101,5 +98,34 @@ function getApi(event) {
         "Humidity: " + data2.list[36].main.humidity + "&percnt;";
     });
 }
+//LOCAL STORAGE
+function storeCity(event) {
+  event.preventDefault();
+  var cityList = document.getElementById("cityList");
+  var searchBar = document.getElementById("searchBar");
+  var searchedCity = searchBar.value;
+  var cities = JSON.parse(localStorage.getItem("cities")) || [];
+  cities.push(searchedCity);
+
+  if (cities.length > 3) {
+    cities.shift();
+  }
+  cityList.innerHTML = "";
+  cities.forEach(function (city) {
+    var li = document.createElement("li");
+    li.appendChild(document.createTextNode(city));
+    cityList.appendChild(li);
+  });
+
+  localStorage.setItem("cities", JSON.stringify(cities));
+
+  searchBar.value = "";
+  console.log(cities);
+}
 
 searchButton.addEventListener("click", getApi);
+searchButton.addEventListener("click", storeCity);
+
+window.onbeforeunload = function (e) {
+  localStorage.clear();
+};
