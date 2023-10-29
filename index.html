@@ -17,7 +17,7 @@
       <div class="search">
         <h2>Search for a City:</h2>
         <input id="searchBar" type="text" placeholder="San Diego" />
-        <button>Search</button>
+        <button id="searchButton">Search</button>
       </div>
       <hr />
       <div class="history">
@@ -33,47 +33,55 @@
     </aside>
     <hero>
       <div class="hero">
-        <h2 id="currentCity">Current City</h2>
-        <h2 id="currentDate">Date</h2>
-        <p id="currentTemp">Temp:</p>
-        <p id="currentWind">Wind:</p>
-        <p id="currentHumidity">Humidity:</p>
+        <h2 id="currentCity"></h2>
+        <h2 id="currentDate"></h2>
+        <img id="currentIcon" src=""></img>
+        <p id="currentTemp"></p>
+        <p id="currentWind"></p>
+        <p id="currentHumidity"></p>
       </div>
     </hero>
     <section>
       <div class="forecast">
         <h3>5-Day Forecast:</h3>
         <div class="card" id="day1">
-          <p class="cardDate" id="day1Date">Day 1</p>
-          <p id="day1Temp">Temp:</p>
-          <p id="day1Wind">Wind:</p>
-          <p id="day1Humidity">Humidity:</p>
+          <p class="cardDate" id="day1Date"></p>
+          <img id="day1Icon" src=""></img>
+          <p id="day1Temp"></p>
+          <p id="day1Wind"></p>
+          <p id="day1Humidity"></p>
         </div>
         <div class="card" id="day2">
-          <p class="cardDate" id="day2Date">Day 2</p>
-          <p id="day2Temp">Temp:</p>
-          <p id="day2Wind">Wind:</p>
-          <p id="day2Humidity">Humidity:</p>
+          <p class="cardDate" id="day2Date"></p>
+          <img id="day2Icon" src=""></img>
+          <p id="day2Temp"></p>
+          <p id="day2Wind"></p>
+          <p id="day2Humidity"></p>
         </div>
         <div class="card" id="day3">
-          <p class="cardDate" id="day3Date">Day 3</p>
-          <p id="day3Temp">Temp:</p>
-          <p id="day3Wind">Wind:</p>
-          <p id="day3Humidity">Humidity:</p>
+          <p class="cardDate" id="day3Date"></p>
+          <img id="day3Icon" src=""></img>
+          <p id="day3Temp"></p>
+          <p id="day3Wind"></p>
+          <p id="day3Humidity"></p>
         </div>
         <div class="card" id="day4">
-          <p class="cardDate" id="day4Date">Day 4</p>
-          <p id="day4Temp">Temp:</p>
-          <p id="day4Wind">Wind:</p>
-          <p id="day4Humidity">Humidity:</p>
+          <p class="cardDate" id="day4Date"></p>
+          <img id="day4Icon" src=""></img>
+          <p id="day4Temp"></p>
+          <p id="day4Wind"></p>
+          <p id="day4Humidity"></p>
         </div>
         <div class="card" id="day5">
-          <p class="cardDate" id="day5Date">Day 5</p>
-          <p id="day5Temp">Temp:</p>
-          <p id="day5Wind">Wind:</p>
-          <p id="day5Humidity">Humidity:</p>
+          <p class="cardDate" id="day5Date"></p>
+          <img id="day5Icon" src=""></img>
+          <p id="day5Temp"></p>
+          <p id="day5Wind"></p>
+          <p id="day5Humidity"></p>
         </div>
       </div>
     </section>
   </body>
+  <script src="assets/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.10/dayjs.min.js"></script>
 </html>

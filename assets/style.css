@@ -36,6 +36,7 @@ aside h2 {
   border: 0px;
   border-radius: 5px;
   height: 40px;
+  cursor: pointer;
 }
 .history button {
   display: block;
@@ -83,5 +84,5 @@ aside h2 {
 
 .cardDate {
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
