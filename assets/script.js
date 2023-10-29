@@ -112,9 +112,9 @@ function storeCity(event) {
   }
   cityList.innerHTML = "";
   cities.forEach(function (city) {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(city));
-    cityList.appendChild(li);
+    var button = document.createElement("button");
+    button.appendChild(document.createTextNode(city));
+    cityList.appendChild(button);
   });
 
   localStorage.setItem("cities", JSON.stringify(cities));
