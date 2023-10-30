@@ -29,6 +29,7 @@ function getApi(event) {
       var currentDate = document.getElementById("currentDate");
       var currentIcon = document.getElementById("currentIcon");
       currentCity.innerHTML = searchedCity;
+
       currentDate.innerHTML = dayjs().format("MM/D/YYYY");
       iconCode = data1.weather[0].icon;
       iconUrl = "http://openweathermap.org/img/w/" + iconCode + ".png";
@@ -103,29 +104,45 @@ function storeCity(event) {
   event.preventDefault();
   var cityList = document.getElementById("cityList");
   var searchBar = document.getElementById("searchBar");
-  var searchedCity = searchBar.value;
+  var searchedCity = searchBar.value.trim();
+
+  if (searchedCity === "") {
+    alert("Please enter a valid city name.");
+    return;
+  }
+
   var cities = JSON.parse(localStorage.getItem("cities")) || [];
   cities.push(searchedCity);
 
-  if (cities.length > 3) {
+  //removes oldest if array >8 cities
+  if (cities.length > 8) {
     cities.shift();
   }
   cityList.innerHTML = "";
   cities.forEach(function (city) {
     var button = document.createElement("button");
+
     button.appendChild(document.createTextNode(city));
     cityList.appendChild(button);
+    //make search history buttons clickable
+    button.addEventListener("click", function () {
+      searchBar.value = city;
+      getApi(event);
+    });
   });
-
+  //stores searched cities in local storage
   localStorage.setItem("cities", JSON.stringify(cities));
-
+  //clear search bar after search
   searchBar.value = "";
   console.log(cities);
 }
 
+//two functions run when search bar is clicked
+
 searchButton.addEventListener("click", getApi);
 searchButton.addEventListener("click", storeCity);
 
+//clears local storage on refresh
 window.onbeforeunload = function (e) {
   localStorage.clear();
 };
