@@ -23,7 +23,7 @@ This webpage is designed for desktop screens; it is not responsive on smaller sc
 
 ## Image:
 
-<img src="https://github.com/lornaburns/weather-forecast-23/blob/main/assets/_C__Users_Lorna%2520and%2520Wright_Desktop_bootcamp_sandbox_week-6_02-Challenge_weather-forecast-23_index.html.png?raw=true" alt="weather dashboard" width="200"/>
+<img src="https://github.com/lornaburns/weather-forecast-23/blob/main/assets/Screenshot%20(14).png?raw=true" alt="weather dashboard" width="200"/>
 
 ## Credits:
 
